@@ -1,0 +1,48 @@
+{
+  "diffEditor.renderSideBySide": false,
+  "[python]": {},
+  "window.zoomLevel": 0,
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "cSpell.userWords": [
+      "Behaviour",
+      "flexbox"
+  ],
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "files.associations": {
+      "*.html": "html"
+  },
+  "remote.SSH.remotePlatform": {
+      "35.223.100.35": "linux"
+  },
+  "python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe",
+  "liveServer.settings.donotVerifyTags": true,
+  "cSpell.enableFiletypes": [
+      "!csharp"
+  ],
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.tabSize": 2,
+  "liveSassCompile.settings.formats":[
+      {
+          "extensionName": ".min.css",
+          "format": "compressed",
+          "savePath": "/dist/styles/"
+      }
+  ],
+  "liveSassCompile.settings.excludeList": [
+     "/node_modules/",
+     ".vscode/**"
+  ],
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.autoprefix": [
+      "> 1%",
+      "last 2 versions"
+  ],
+  "[javascript]": {
+      "editor.formatOnSave": true
+  },
+  "[scss]": {
+      "editor.formatOnSave": true
+  },
+}
