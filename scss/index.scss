@@ -1,6 +1,9 @@
 @import "./organisms/header/header";
 @import "./organisms/generalInformation/generralInformation";
 @import "./organisms/targets-more/targets-more";
+@import "./organisms/your-quotes/your-quotes";
+@import "./atoms/toogle/_toogle";
+@import "./atoms/select/select";
 
 body {
   background-color: #01273b;
