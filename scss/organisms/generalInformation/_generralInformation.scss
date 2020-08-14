@@ -1,10 +1,20 @@
 .general-information {
+  & .container {
+    background-image: url("/src/img/main/generalImformation/Ross-castle2.png");
+    // background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #f6f8fa;
+  }
+
   &__wrapper {
-    padding-left: 152px;
-    padding-right: 194px;
     padding-top: 33.5px;
     padding-bottom: 40px;
+    padding-right: 50px;
+    padding-left: 50px;
+    max-width: 1190px;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__amount-gold {
@@ -39,40 +49,53 @@
 
   &__cards {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: space-between;
   }
 
   &__item-card {
-    width: 275px;
-    height: 240px;
-    min-width: 275px;
+    // width: 275px;
+    width: 100%;
+    max-width: 275px;
+    min-width: 245px;
     background-color: #ffffff;
     box-shadow: 0px 5px 25px #52575d1a;
     border-radius: 10px;
-    padding-top: 41px;
+    padding: 40px 0;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item-card:not(:last-child) {
+    margin-right: 10px;
   }
 
   &__card-ico {
     width: 59px;
     height: 59px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    // margin-left: auto;
+    // margin-right: auto;
     margin-bottom: 12px;
   }
-}
 
-.general-information .container {
-  background-image: url("/src/img/main/generalImformation/Ross-castle2.png");
-  // background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #f6f8fa;
-}
+  &__card-text {
+    text-align: center;
+    font-weight: 600;
+  }
 
-.general-information-cards__item:not(:last-child) {
-  margin-right: 30px;
+  &__card-text span {
+    font-size: 60px;
+    margin-bottom: 10px;
+  }
+
+  &__card-text p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
 }
 
 .location {
@@ -89,18 +112,4 @@
 
 .target {
   background-image: url("/src/img/main/generalImformation/target_i.png");
-}
-.general-information__card-text {
-  text-align: center;
-  font-size: 22px;
-  font-weight: 600;
-}
-
-.general-information__card-text span {
-  font-size: 60px;
-  margin-bottom: 10px;
-}
-
-.general-information__card-text p {
-  margin-top: 10px;
 }

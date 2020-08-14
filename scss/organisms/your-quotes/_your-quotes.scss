@@ -1,8 +1,13 @@
-.your-quotes__wrapper {
-  padding: 20px 194px 20px 152px;
+.your-quotes {
+  &__wrapper {
+    padding: 20px 50px 20px 50px;
+    max-width: 1190px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
-.your-quotes-big-card {
+.your-quotes .your-quotes-big-card {
   padding: 29px 30px 29px 30px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -55,6 +60,7 @@
   display: flex;
   flex-wrap: wrap;
   padding-top: 18px;
+  justify-content: space-between;
 }
 
 .your-quotes-small-card {
@@ -72,7 +78,7 @@
 }
 
 .your-quotes-small-card:not(:nth-child(4n + 4)) {
-  margin-right: 22px;
+  margin-right: 10px;
 }
 
 .your-quotes-small-card__wrapper {
