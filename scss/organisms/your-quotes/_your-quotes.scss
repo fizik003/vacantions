@@ -67,6 +67,8 @@
   height: 100%;
   max-width: 266px;
   width: 100%;
+  min-width: 220px;
+  margin-bottom: 30px;
 }
 
 .your-quotes-small-card:not(:nth-child(4n + 4)) {
@@ -86,6 +88,10 @@
   width: max-content;
   padding: 5px 8px 3px;
   margin-bottom: 13px;
+}
+
+.your-quotes-small-card__sticker_peach {
+  background-color: #ff6a6a26;
 }
 
 .your-quotes-small-card__sticker span {
@@ -127,4 +133,26 @@
 
 .your-quotes-small-card__propertys p:not(:last-child) {
   margin-bottom: 6px;
+}
+
+.your-quotes-small-card__price {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.your-quotes-small-card__commissin-price {
+}
+
+.your-quotes-small-card__footer {
+  display: flex;
+}
+
+.your-quotes-small-card__commissin-price {
+  display: flex;
+  margin-left: 2px;
+}
+
+.your-quotes-small-card__unit-com {
+  margin-left: 3px;
 }

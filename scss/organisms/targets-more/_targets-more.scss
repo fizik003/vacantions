@@ -1,5 +1,10 @@
-.targets-more__wrapper {
-  padding: 20px 194px 20px 152px;
+.targets-more {
+  &__wrapper {
+    // padding: 20px 194px 20px 152px;
+    padding: 20px 12% 20px 9%;
+    // padding-left: calc(9vw);
+    // padding-right: calc(12vw);
+  }
 }
 
 .target-more__title {

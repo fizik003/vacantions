@@ -1,3 +1,69 @@
+.general-information {
+  &__wrapper {
+    padding-left: 152px;
+    padding-right: 194px;
+    padding-top: 33.5px;
+    padding-bottom: 40px;
+    position: relative;
+  }
+
+  &__amount-gold {
+    margin-right: 210px;
+  }
+
+  &__amount-gold {
+    margin-left: auto;
+  }
+
+  &__user {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__user-name {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  &__user p {
+    color: #ffffff;
+    color: #ffffff;
+    font-size: 22px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item-card {
+    width: 275px;
+    height: 240px;
+    min-width: 275px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 25px #52575d1a;
+    border-radius: 10px;
+    padding-top: 41px;
+    box-sizing: border-box;
+  }
+
+  &__card-ico {
+    width: 59px;
+    height: 59px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
+  }
+}
+
 .general-information .container {
   background-image: url("/src/img/main/generalImformation/Ross-castle2.png");
   // background-size: cover;
@@ -5,102 +71,8 @@
   background-color: #f6f8fa;
 }
 
-.general-information__wrapper {
-  padding-left: 152px;
-  padding-right: 194px;
-  padding-top: 33.5px;
-  padding-bottom: 40px;
-  position: relative;
-}
-
-.amount-gold {
-  position: relative;
-  /* display: block; */
-  margin-left: auto;
-  width: max-content;
-  /* right: 316px; */
-  /* top: 0; */
-  margin-right: 210px;
-}
-
-.amount-gold__value {
-  color: #28323a;
-  background-color: #ffffff;
-  display: inline-block;
-  position: absolute;
-  top: 12px;
-  left: 20px;
-  font-size: 14px;
-  font-weight: 800;
-  width: max-content;
-  padding: 9px 23px 9px 49px;
-  border-radius: 5px;
-  z-index: 1;
-}
-
-.amount-gold__value span {
-  font-size: 22px;
-}
-
-.amount-gold i {
-  background-image: url("/src/img/main/generalImformation/gold.png");
-  width: 59px;
-  height: 59px;
-  display: block;
-  position: absolute;
-  z-index: 2;
-}
-
-.general-information__user {
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  width: max-content;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.general-information__user-name {
-  color: #ffffff;
-  font-size: 36px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.general-information__user p {
-  color: #ffffff;
-  color: #ffffff;
-  font-size: 22px;
-}
-
-.general-information-cards {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.general-information-cards__item {
-  width: 275px;
-  height: 240px;
-  min-width: 275px;
-  background-color: #ffffff;
-  box-shadow: 0px 5px 25px #52575d1a;
-  border-radius: 10px;
-  padding-top: 41px;
-  box-sizing: border-box;
-}
-
 .general-information-cards__item:not(:last-child) {
   margin-right: 30px;
-}
-
-.location-ico {
-  width: 59px;
-  height: 59px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 12px;
-  // width: max-content;
 }
 
 .location {
@@ -118,17 +90,17 @@
 .target {
   background-image: url("/src/img/main/generalImformation/target_i.png");
 }
-.general-information-cards__item-text {
+.general-information__card-text {
   text-align: center;
   font-size: 22px;
   font-weight: 600;
 }
 
-.general-information-cards__item-text span {
+.general-information__card-text span {
   font-size: 60px;
   margin-bottom: 10px;
 }
 
-.general-information-cards__item-text p {
+.general-information__card-text p {
   margin-top: 10px;
 }

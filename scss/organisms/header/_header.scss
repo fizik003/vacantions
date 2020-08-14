@@ -1,5 +1,9 @@
-.header__wrapper {
-  padding: 43px 194px 30px 152px;
+.header {
+  &__wrapper {
+    padding: 43px 194px 30px 152px;
+    padding-left: calc(9% + 10px);
+    padding-right: calc(12% + 10px);
+  }
 }
 
 .header__top {
