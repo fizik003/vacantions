@@ -1,11 +1,16 @@
-.yoy-revenue__wrapper {
-  padding: 20px 194px 20px 152px;
-}
+.yoy-revenue {
+  &__wrapper {
+    padding: 20px 50px 20px 50px;
+    max-width: 1190px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.yoy-revenue__content {
-  background-color: #ffffff;
-  box-shadow: 0px 3px 6px #cccccc1a;
-  border: 1px solid #e1e2e5;
-  border-radius: 5px;
-  height: 300px;
+  &__content {
+    background-color: #ffffff;
+    box-shadow: 0px 3px 6px #cccccc1a;
+    border: 1px solid #e1e2e5;
+    border-radius: 5px;
+    height: 300px;
+  }
 }

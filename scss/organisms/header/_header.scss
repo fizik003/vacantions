@@ -9,6 +9,7 @@
   &__top {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 20px;
   }
@@ -19,6 +20,7 @@
     height: 28.95px;
     width: 395.87px;
     margin-top: -8px;
+    background-repeat: no-repeat;
   }
   &__quotes {
     margin-left: auto;
@@ -72,5 +74,16 @@
     display: inline-block;
     background-color: #508ff4;
     color: #ffffff;
+  }
+
+  @media (max-width: 1200px) {
+    &__logo {
+      flex-basis: 100%;
+      margin-bottom: 20px;
+      background-position-x: center;
+    }
+    &__quotes {
+      margin-left: unset;
+    }
   }
 }

@@ -25,7 +25,8 @@
     border-radius: 10px;
     margin-bottom: 21px;
     min-width: 530px;
-    width: 48.7%;
+    width: 100%;
+    flex-basis: 48.75%;
   }
 
   &__card:nth-child(odd) {
@@ -241,6 +242,16 @@
   &__card-main-item .text-bold {
     font-weight: 600;
     color: #5a5a5a;
+  }
+
+  @media (max-width: 1200px) {
+    &__cards {
+      justify-content: center;
+    }
+
+    &__item-card {
+      flex-basis: 60%;
+    }
   }
 }
 

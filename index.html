@@ -353,36 +353,64 @@
     <section class="your-quotes">
       <div class="container">
         <div class="your-quotes__wrapper">
-          <div class="your-quotes-big-card">
-            <div class="your-quotes-big-card__header">
-              <div class="your-quotes-big-card__title">Your Quotes</div>
-              <div class="your-quotes-big-card__check-quotes">
-                <span class="your-quotes-big-card__label-check bla">Quotes</span>
-                <label class="your-quotes-big-card__check switch"> 
+          <div class="your-quotes__big-card">
+            <div class="your-quotes__big-card-header">
+              <div class="your-quotes__big-card-title">Your Quotes</div>
+              <div class="your-quotes__big-card-check-quotes">
+                <span class="your-quotes__big-card-label-check bla">Quotes</span>
+                <label class="your-quotes__big-card-check switch"> 
                   <input type="checkbox" id="card__check">
                   <span class="slider round"></span>
                 </label>
-                <span class="your-quotes-big-card__label-check your-quotes-big-card__label-check_blue">Bookings</span>
+                <span class="your-quotes__big-card-label-check your-quotes__big-card-label-check_blue">Bookings</span>
               </div>
-              <div class="your-quotes-big-card__sort-item">
-                <span class="your-quotes-big-card__label-select">sort by</span>
-                <select class="your-quotes-big-card__select select"  name="" id="">
+              <div class="your-quotes__big-card-sort-item">
+                <span class="your-quotes__big-card-label-select">sort by</span>
+                <select class="your-quotes__big-card-select select"  name="" id="">
                   <option value="">Departure Date</option>
                   <option value="">1111</option>
                 </select>
               </div>
             </div>
-            <div class="your-quotes-big-card__main">
-              <div class="your-quotes-small-card">
-                <div class="your-quotes-small-card__wrapper">
-                  <div class="your-quotes-small-card__sticker">
+            <div class="your-quotes__big-card-main">
+              <div class="your-quotes__small-card">
+                <div class="your-quotes__small-card-wrapper">
+                  <div class="your-quotes__small-card-sticker">
                     <span>Emailed Client</span>
                   </div>
-                  <div class="your-quotes-small-card__content">
-                    <p class="your-quotes-small-card__title">
+                  <div class="your-quotes__small-card-content">
+                    <p class="your-quotes__small-card-title">
                       7-Night Grand Irish Whiskey Experience
                     </p>
-                    <div class="your-quotes-small-card__items-list">
+                    <div class="your-quotes__small-card-items-list">
+                      <div class="your-quotes__small-card-keys">
+                        <p>Tour Reference</p>
+                        <p>Client Name</p>
+                        <p>Departure</p>
+                      </div>
+                      <div class="your-quotes__small-card-propertys">
+                        <p>290729</p>
+                        <p>John Smith</p>
+                        <p>10/10/2020</p>
+                      </div>
+                    </div>
+                    <div class="your-quotes__small-card-price">
+                      <span class="your-quotes__small-card-unit">$</span>
+                      <span class="your-quotes__small-card-value">PRICE</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="your-quotes__small-card">
+                <div class="your-quotes__small-card-wrapper">
+                  <div class="your-quotes__small-card-sticker">
+                    <span>Emailed Client</span>
+                  </div>
+                  <div class="your-quotes__small-card-content">
+                    <p class="your-quotes__small-card-title">
+                      7-Night Grand Irish Whiskey Experience
+                    </p>
+                    <div class="your-quotes__small-card-items-list">
                       <div class="your-quotes-small-card__keys">
                         <p>Tour Reference</p>
                         <p>Client Name</p>
@@ -394,113 +422,365 @@
                         <p>10/10/2020</p>
                       </div>
                     </div>
-                    <div class="your-quotes-small-card__price">
-                      <span class="your-quotes-small-card__unit">$</span>
-                      <span class="your-quotes-small-card__value">PRICE</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="your-quotes-small-card">
-                <div class="your-quotes-small-card__wrapper">
-                  <div class="your-quotes-small-card__sticker">
-                    <span>Emailed Client</span>
-                  </div>
-                  <div class="your-quotes-small-card__content">
-                    <p class="your-quotes-small-card__title">
-                      7-Night Grand Irish Whiskey Experience
-                    </p>
-                    <div class="your-quotes-small-card__items-list">
-                      <div class="your-quotes-small-card__keys">
-                        <p>Tour Reference</p>
-                        <p>Client Name</p>
-                        <p>Departure</p>
+                    <div class="your-quotes__small-card-footer">
+                      <div class="your-quotes__small-card-price">
+                        <span class="your-quotes__small-card-unit">$</span>
+                        <span class="your-quotes__small-card-value">PRICE</span>
                       </div>
-                      <div class="your-quotes-small-card__propertys">
-                        <p>290729</p>
-                        <p>John Smith</p>
-                        <p>10/10/2020</p>
-                      </div>
-                    </div>
-                    <div class="your-quotes-small-card__footer">
-                      <div class="your-quotes-small-card__price">
-                        <span class="your-quotes-small-card__unit">$</span>
-                        <span class="your-quotes-small-card__value">PRICE</span>
-                      </div>
-                      <div class="your-quotes-small-card__commissin-price">
-                        <span class="your-quotes-small-card__text-com">| Commission</span>
-                        <span class="your-quotes-small-card__unit-com" >$</span>
-                        <span class="your-quotes-small-card__value-com">PRICE</span>
+                      <div class="your-quotes__small-card-commissin-price">
+                        <span class="your-quotes__small-card-text-com">| Commission</span>
+                        <span class="your-quotes__small-card-unit-com" >$</span>
+                        <span class="your-quotes__small-card-value-com">PRICE</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="your-quotes-small-card">
-                <div class="your-quotes-small-card__wrapper">
-                  <div class="your-quotes-small-card__sticker  your-quotes-small-card__sticker_peach">
+              <div class="your-quotes__small-card">
+                <div class="your-quotes__small-card-wrapper">
+                  <div class="your-quotes__small-card-sticker  your-quotes__small-card-sticker_peach">
                     <span>Quote ready to view</span>
                   </div>
-                  <div class="your-quotes-small-card__content">
-                    <p class="your-quotes-small-card__title">
+                  <div class="your-quotes__small-card-content">
+                    <p class="your-quotes__small-card-title">
                       7-Night Grand Irish Whiskey Experience
                     </p>
-                    <div class="your-quotes-small-card__items-list">
-                      <div class="your-quotes-small-card__keys">
+                    <div class="your-quotes__small-card-items-list">
+                      <div class="your-quotes__small-card-keys">
                         <p>Tour Reference</p>
                         <p>Client Name</p>
                         <p>Departure</p>
                       </div>
-                      <div class="your-quotes-small-card__propertys">
+                      <div class="your-quotes__small-card-propertys">
                         <p>290729</p>
                         <p>John Smith</p>
                         <p>10/10/2020</p>
                       </div>
                     </div>
-                    <div class="your-quotes-small-card__footer">
-                      <div class="your-quotes-small-card__price">
-                        <span class="your-quotes-small-card__unit">$</span>
-                        <span class="your-quotes-small-card__value">PRICE</span>
+                    <div class="your-quotes__small-card-footer">
+                      <div class="your-quotes__small-card-price">
+                        <span class="your-quotes__small-card-unit">$</span>
+                        <span class="your-quotes__small-card-value">PRICE</span>
                       </div>
-                      <div class="your-quotes-small-card__commissin-price">
-                        <span class="your-quotes-small-card__text-com">| Commission</span>
-                        <span class="your-quotes-small-card__unit-com" >$</span>
-                        <span class="your-quotes-small-card__value-com">PRICE</span>
+                      <div class="your-quotes__small-card-commissin-price">
+                        <span class="your-quotes__small-card-text-com">| Commission</span>
+                        <span class="your-quotes__small-card-unit-com" >$</span>
+                        <span class="your-quotes__small-card-value-com">PRICE</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="your-quotes-small-card">
-                <div class="your-quotes-small-card__wrapper">
-                  <div class="your-quotes-small-card__sticker">
+              <div class="your-quotes__small-card">
+                <div class="your-quotes__small-card-wrapper">
+                  <div class="your-quotes__small-card-sticker">
                     <span>Emailed Client</span>
                   </div>
-                  <div class="your-quotes-small-card__content">
-                    <p class="your-quotes-small-card__title">
+                  <div class="your-quotes__small-card-content">
+                    <p class="your-quotes__small-card-title">
                       7-Night Grand Irish Whiskey Experience
                     </p>
-                    <div class="your-quotes-small-card__items-list">
-                      <div class="your-quotes-small-card__keys">
+                    <div class="your-quotes__small-card-items-list">
+                      <div class="your-quotes__small-card-keys">
                         <p>Tour Reference</p>
                         <p>Client Name</p>
                         <p>Departure</p>
                       </div>
-                      <div class="your-quotes-small-card__propertys">
+                      <div class="your-quotes__small-card-propertys">
                         <p>290729</p>
                         <p>John Smith</p>
                         <p>10/10/2020</p>
                       </div>
                     </div>
-                    <div class="your-quotes-small-card__footer">
-                      <div class="your-quotes-small-card__price">
-                        <span class="your-quotes-small-card__unit">$</span>
-                        <span class="your-quotes-small-card__value">PRICE</span>
+                    <div class="your-quotes__small-card-footer">
+                      <div class="your-quotes__small-card-price">
+                        <span class="your-quotes__small-card-unit">$</span>
+                        <span class="your-quotes__small-card-value">PRICE</span>
                       </div>
-                      <div class="your-quotes-small-card__commissin-price">
-                        <span class="your-quotes-small-card__text-com">| Commission</span>
-                        <span class="your-quotes-small-card__unit-com" >$</span>
-                        <span class="your-quotes-small-card__value-com">PRICE</span>
+                      <div class="your-quotes__small-card-commissin-price">
+                        <span class="your-quotes__small-card-text-com">| Commission</span>
+                        <span class="your-quotes__small-card-unit-com" >$</span>
+                        <span class="your-quotes__small-card-value-com">PRICE</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="your-quotes__small-card">
+                <div class="your-quotes__small-card-wrapper">
+                  <div class="your-quotes__small-card-sticker">
+                    <span>Emailed Client</span>
+                  </div>
+                  <div class="your-quotes__small-card-content">
+                    <p class="your-quotes__small-card-title">
+                      7-Night Grand Irish Whiskey Experience
+                    </p>
+                    <div class="your-quotes__small-card-items-list">
+                      <div class="your-quotes__small-card-keys">
+                        <p>Tour Reference</p>
+                        <p>Client Name</p>
+                        <p>Departure</p>
+                      </div>
+                      <div class="your-quotes__small-card-propertys">
+                        <p>290729</p>
+                        <p>John Smith</p>
+                        <p>10/10/2020</p>
+                      </div>
+                    </div>
+                    <div class="your-quotes__small-card-footer">
+                      <div class="your-quotes__small-card-price">
+                        <span class="your-quotes__small-card-unit">$</span>
+                        <span class="your-quotes__small-card-value">PRICE</span>
+                      </div>
+                      <div class="your-quotes__small-card-commissin-price">
+                        <span class="your-quotes__small-card-text-com">| Commission</span>
+                        <span class="your-quotes__small-card-unit-com" >$</span>
+                        <span class="your-quotes__small-card-value-com">PRICE</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="your-quotes__small-card">
+                <div class="your-quotes__small-card-wrapper">
+                  <div class="your-quotes__small-card-sticker">
+                    <span>Emailed Client</span>
+                  </div>
+                  <div class="your-quotes__small-card-content">
+                    <p class="your-quotes__small-card-title">
+                      7-Night Grand Irish Whiskey Experience
+                    </p>
+                    <div class="your-quotes__small-card-items-list">
+                      <div class="your-quotes__small-card-keys">
+                        <p>Tour Reference</p>
+                        <p>Client Name</p>
+                        <p>Departure</p>
+                      </div>
+                      <div class="your-quotes__small-card-propertys">
+                        <p>290729</p>
+                        <p>John Smith</p>
+                        <p>10/10/2020</p>
+                      </div>
+                    </div>
+                    <div class="your-quotes__small-card-footer">
+                      <div class="your-quotes__small-card-price">
+                        <span class="your-quotes__small-card-unit">$</span>
+                        <span class="your-quotes__small-card-value">PRICE</span>
+                      </div>
+                      <div class="your-quotes__small-card-commissin-price">
+                        <span class="your-quotes__small-card-text-com">| Commission</span>
+                        <span class="your-quotes__small-card-unit-com" >$</span>
+                        <span class="your-quotes__small-card-value-com">PRICE</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="your-quotes__small-card">
+                <div class="your-quotes__small-card-wrapper">
+                  <div class="your-quotes__small-card-sticker">
+                    <span>Emailed Client</span>
+                  </div>
+                  <div class="your-quotes__small-card-content">
+                    <p class="your-quotes__small-card-title">
+                      7-Night Grand Irish Whiskey Experience
+                    </p>
+                    <div class="your-quotes__small-card-items-list">
+                      <div class="your-quotes__small-card-keys">
+                        <p>Tour Reference</p>
+                        <p>Client Name</p>
+                        <p>Departure</p>
+                      </div>
+                      <div class="your-quotes__small-card-propertys">
+                        <p>290729</p>
+                        <p>John Smith</p>
+                        <p>10/10/2020</p>
+                      </div>
+                    </div>
+                    <div class="your-quotes__small-card-footer">
+                      <div class="your-quotes__small-card-price">
+                        <span class="your-quotes__small-card-unit">$</span>
+                        <span class="your-quotes__small-card-value">PRICE</span>
+                      </div>
+                      <div class="your-quotes__small-card-commissin-price">
+                        <span class="your-quotes__small-card-text-com">| Commission</span>
+                        <span class="your-quotes__small-card-unit-com" >$</span>
+                        <span class="your-quotes__small-card-value-com">PRICE</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="your-quotes__small-card">
+                <div class="your-quotes__small-card-wrapper">
+                  <div class="your-quotes__small-card-sticker">
+                    <span>Emailed Client</span>
+                  </div>
+                  <div class="your-quotes__small-card-content">
+                    <p class="your-quotes__small-card-title">
+                      7-Night Grand Irish Whiskey Experience
+                    </p>
+                    <div class="your-quotes__small-card-items-list">
+                      <div class="your-quotes__small-card-keys">
+                        <p>Tour Reference</p>
+                        <p>Client Name</p>
+                        <p>Departure</p>
+                      </div>
+                      <div class="your-quotes__small-card-propertys">
+                        <p>290729</p>
+                        <p>John Smith</p>
+                        <p>10/10/2020</p>
+                      </div>
+                    </div>
+                    <div class="your-quotes__small-card-footer">
+                      <div class="your-quotes__small-card-price">
+                        <span class="your-quotes__small-card-unit">$</span>
+                        <span class="your-quotes__small-card-value">PRICE</span>
+                      </div>
+                      <div class="your-quotes__small-card-commissin-price">
+                        <span class="your-quotes__small-card-text-com">| Commission</span>
+                        <span class="your-quotes__small-card-unit-com" >$</span>
+                        <span class="your-quotes__small-card-value-com">PRICE</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="your-quotes__small-card">
+                <div class="your-quotes__small-card-wrapper">
+                  <div class="your-quotes__small-card-sticker">
+                    <span>Emailed Client</span>
+                  </div>
+                  <div class="your-quotes__small-card-content">
+                    <p class="your-quotes__small-card-title">
+                      7-Night Grand Irish Whiskey Experience
+                    </p>
+                    <div class="your-quotes__small-card-items-list">
+                      <div class="your-quotes__small-card-keys">
+                        <p>Tour Reference</p>
+                        <p>Client Name</p>
+                        <p>Departure</p>
+                      </div>
+                      <div class="your-quotes__small-card-propertys">
+                        <p>290729</p>
+                        <p>John Smith</p>
+                        <p>10/10/2020</p>
+                      </div>
+                    </div>
+                    <div class="your-quotes__small-card-footer">
+                      <div class="your-quotes__small-card-price">
+                        <span class="your-quotes__small-card-unit">$</span>
+                        <span class="your-quotes__small-card-value">PRICE</span>
+                      </div>
+                      <div class="your-quotes__small-card-commissin-price">
+                        <span class="your-quotes__small-card-text-com">| Commission</span>
+                        <span class="your-quotes__small-card-unit-com" >$</span>
+                        <span class="your-quotes__small-card-value-com">PRICE</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="your-quotes__small-card">
+                <div class="your-quotes__small-card-wrapper">
+                  <div class="your-quotes__small-card-sticker">
+                    <span>Emailed Client</span>
+                  </div>
+                  <div class="your-quotes__small-card-content">
+                    <p class="your-quotes__small-card-title">
+                      7-Night Grand Irish Whiskey Experience
+                    </p>
+                    <div class="your-quotes__small-card-items-list">
+                      <div class="your-quotes__small-card-keys">
+                        <p>Tour Reference</p>
+                        <p>Client Name</p>
+                        <p>Departure</p>
+                      </div>
+                      <div class="your-quotes__small-card-propertys">
+                        <p>290729</p>
+                        <p>John Smith</p>
+                        <p>10/10/2020</p>
+                      </div>
+                    </div>
+                    <div class="your-quotes__small-card-footer">
+                      <div class="your-quotes__small-card-price">
+                        <span class="your-quotes__small-card-unit">$</span>
+                        <span class="your-quotes__small-card-value">PRICE</span>
+                      </div>
+                      <div class="your-quotes__small-card-commissin-price">
+                        <span class="your-quotes__small-card-text-com">| Commission</span>
+                        <span class="your-quotes__small-card-unit-com" >$</span>
+                        <span class="your-quotes__small-card-value-com">PRICE</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="your-quotes__small-card">
+                <div class="your-quotes__small-card-wrapper">
+                  <div class="your-quotes__small-card-sticker">
+                    <span>Emailed Client</span>
+                  </div>
+                  <div class="your-quotes__small-card-content">
+                    <p class="your-quotes__small-card-title">
+                      7-Night Grand Irish Whiskey Experience
+                    </p>
+                    <div class="your-quotes__small-card-items-list">
+                      <div class="your-quotes__small-card-keys">
+                        <p>Tour Reference</p>
+                        <p>Client Name</p>
+                        <p>Departure</p>
+                      </div>
+                      <div class="your-quotes__small-card-propertys">
+                        <p>290729</p>
+                        <p>John Smith</p>
+                        <p>10/10/2020</p>
+                      </div>
+                    </div>
+                    <div class="your-quotes__small-card-footer">
+                      <div class="your-quotes__small-card-price">
+                        <span class="your-quotes__small-card-unit">$</span>
+                        <span class="your-quotes__small-card-value">PRICE</span>
+                      </div>
+                      <div class="your-quotes__small-card-commissin-price">
+                        <span class="your-quotes__small-card-text-com">| Commission</span>
+                        <span class="your-quotes__small-card-unit-com" >$</span>
+                        <span class="your-quotes__small-card-value-com">PRICE</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="your-quotes__small-card">
+                <div class="your-quotes__small-card-wrapper">
+                  <div class="your-quotes__small-card-sticker">
+                    <span>Emailed Client</span>
+                  </div>
+                  <div class="your-quotes__small-card-content">
+                    <p class="your-quotes__small-card-title">
+                      7-Night Grand Irish Whiskey Experience
+                    </p>
+                    <div class="your-quotes__small-card-items-list">
+                      <div class="your-quotes__small-card-keys">
+                        <p>Tour Reference</p>
+                        <p>Client Name</p>
+                        <p>Departure</p>
+                      </div>
+                      <div class="your-quotes__small-card-propertys">
+                        <p>290729</p>
+                        <p>John Smith</p>
+                        <p>10/10/2020</p>
+                      </div>
+                    </div>
+                    <div class="your-quotes__small-card-footer">
+                      <div class="your-quotes__small-card-price">
+                        <span class="your-quotes__small-card-unit">$</span>
+                        <span class="your-quotes__small-card-value">PRICE</span>
+                      </div>
+                      <div class="your-quotes__small-card-commissin-price">
+                        <span class="your-quotes__small-card-text-com">| Commission</span>
+                        <span class="your-quotes__small-card-unit-com" >$</span>
+                        <span class="your-quotes__small-card-value-com">PRICE</span>
                       </div>
                     </div>
                   </div>
