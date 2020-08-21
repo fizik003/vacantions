@@ -18,6 +18,7 @@
   }
 
   &__amount-gold {
+    right: 0;
     margin-right: 210px;
   }
 
@@ -71,6 +72,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 240px;
   }
 
   &__card-ico {
@@ -100,6 +102,21 @@
       flex-basis: 40%;
       margin-right: unset;
       margin-bottom: 30px;
+    }
+
+    &__user {
+      margin-top: 65px;
+      width: auto;
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__wrapper {
+      padding: 20px 25px;
+    }
+
+    &__item-card {
+      flex-basis: 100%;
     }
   }
 }

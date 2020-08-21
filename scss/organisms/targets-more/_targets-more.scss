@@ -24,14 +24,10 @@
   }
 
   &__item-card {
-    flex-basis: 50%;
+    flex: 1 1 50%;
     padding: 0 15px;
     box-sizing: border-box;
   }
-
-  // &__card:nth-child(odd) {
-  //   margin-right: 15px;
-  // }
 
   &__card-wrapper {
     padding: 25px 29px 22px 30px;
@@ -39,8 +35,6 @@
     box-shadow: 0px 5px 25px #c4c8d066;
     border-radius: 10px;
     margin-bottom: 21px;
-    // min-width: 530px;
-    // width: 100%;
   }
 
   &__card-title {
@@ -76,17 +70,6 @@
     font-size: 30px;
     text-shadow: -6.06px 4px 101px #0000000d;
     display: flex;
-  }
-
-  &__card-middle-column {
-    height: 218px;
-    width: 218px;
-    background-image: url("/src/img/main/targets_more/25-circle.png");
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   &__card-middle-column-value {
@@ -258,6 +241,55 @@
       flex-basis: 60%;
     }
   }
+
+  @media (max-width: 576px) {
+    &__wrapper {
+      padding: 20px 25px;
+    }
+
+    &__card-wrapper {
+      padding: 15px 20px;
+    }
+
+    &__card-content {
+      flex-direction: column;
+    }
+
+    &__card-header {
+      flex-direction: column;
+      align-items: baseline;
+    }
+
+    &__card-header div:not(:last-child) {
+      margin-bottom: 7px;
+    }
+
+    &__card-main {
+      flex-direction: column;
+    }
+
+    &__card-left-column .value {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__card-middle-column {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__card-right-column p {
+      margin-top: 10px;
+    }
+
+    &__card-promise {
+      width: 100%;
+    }
+
+    &__card-sort-el select {
+      width: 100%;
+    }
+  }
 }
 
 .bookings-card {
@@ -284,4 +316,46 @@
 
 .text-bold.link {
   color: #508ff4;
+}
+
+// ffffffffffffff
+
+.canvas-text {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 30px;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  text-shadow: -6.06px 4px 101px #0000000d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.canvas-text #procent {
+  margin-bottom: 4.93px;
+}
+
+.target-text {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-shadow: -6.06px 4px 101px #0000000d;
+  text-transform: uppercase;
+  color: #8097b1;
+}
+
+span#procent::after {
+  content: "%";
+}
+
+.canvas-wrap {
+  position: relative;
+  width: 218px;
+  height: 218px;
+}
+
+#canvas {
+  width: 218px;
+  height: 218px;
 }
