@@ -239,12 +239,16 @@
 
     &__item-card {
       flex-basis: 60%;
+      min-width: 570px;
     }
   }
 
   @media (max-width: 576px) {
     &__wrapper {
       padding: 20px 25px;
+    }
+    &__item-card {
+      min-width: unset;
     }
 
     &__card-wrapper {
@@ -345,7 +349,7 @@
   color: #8097b1;
 }
 
-span#procent::after {
+span#percent::after {
   content: "%";
 }
 

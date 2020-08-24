@@ -1,113 +1,108 @@
-const colors = ["#eb7272", "#b766b9", "#7384e5", "#52b1bf", "#58b38e"];
-class ProgressBar {
-  constructor(
-    // percent = 0,
-    colors = ["red", "blue", "green"],
-    container = "canvas-wrap",
-    lineWidth = 18
-  ) {
-    this.container = document.querySelector(`.${container}`);
-    this.canvas = this.container.querySelector("#canvas");
-    this.ctx = this.canvas.getContext("2d");
-    this.procentSpan = this.container.querySelector("#procent");
-    this.currentNumbEl = this.container.querySelector(".current-numb");
-    this.currentNumb = Number(
-      this.currentNumbEl.children[1].innerHTML.replace(",", "")
-    );
-    this.targetNumb = this.container.querySelector(".target-numb .numb");
+function getDataFromCard(className) {
+  const card1 = document.querySelector(`.${className}`);
+  const canvas = card1.querySelector("#canvas");
+  const ctx = canvas.getContext("2d");
+  const percentText = card1.querySelector("#percent");
+  const curentEl = card1.querySelector(".value.current-numb");
+  const curentText = card1
+    .querySelector(".value.current-numb .numb")
+    .textContent.replace(",", "");
 
-    this.targetNumb = Number(this.targetNumb.innerHTML.replace(",", ""));
-    this.percent = (this.currentNumb / this.targetNumb) * 100;
-    this.bigPercent = this.percent > 100 ? this.percent - 100 : 0;
-    this.percent = this.percent - this.bigPercent;
-
-    this.lineWidth = lineWidth;
-    this.xc = this.canvas.width / 2;
-    this.yc = this.canvas.height / 2;
-    this.r = this.xc - this.lineWidth;
-    this.colors = colors;
-    this.ctx.lineCap = "round";
-    this.colorsNumber = Math.ceil(
-      (this.percent * (this.colors.length - 1)) / 100
-    );
-    this.partLength = (Math.PI * 2 * this.percent) / 100 / this.colorsNumber;
-    this.start = (Math.PI / 180) * 270;
-    this.procentSpan.textContent = (this.percent + this.bigPercent).toFixed();
-    this.ctx.lineCap = "round";
-    this.backColor = "#e1e2e5";
-    console.log(this.canvas.width / 2);
-  }
-
-  drawBackGround() {
-    this.ctx.beginPath();
-    this.ctx.strokeStyle = this.backColor;
-    this.ctx.arc(this.xc, this.yc, this.r, this.start, this.start + 6.28);
-    this.ctx.lineWidth = this.lineWidth - 0.5;
-    this.ctx.stroke();
-    this.ctx.closePath();
-  }
-
-  drawGradient() {
-    for (let i = 0; i < this.colorsNumber; i += 1) {
-      let startColor = this.colors[i];
-      let endColor = this.colors[i + 1];
-      this.currentNumbEl.style.color = this.colors[i + 1];
-      let xStart = this.xc + Math.cos(this.start) * this.r;
-      let xEnd = this.xc + Math.cos(this.start + this.partLength) * this.r;
-      let yStart = this.yc + Math.sin(this.start) * this.r;
-      let yEnd = this.yc + Math.sin(this.start + this.partLength) * this.r;
-      let gradient = this.ctx.createLinearGradient(xStart, yStart, xEnd, yEnd);
-      gradient.addColorStop(0, startColor);
-      gradient.addColorStop(1.0, endColor);
-      this.ctx.beginPath();
-      this.ctx.strokeStyle = gradient;
-      this.ctx.arc(
-        this.xc,
-        this.yc,
-        this.r,
-        this.start,
-        this.start + this.partLength
-      );
-      this.ctx.lineWidth = this.lineWidth;
-      this.ctx.stroke();
-      this.ctx.closePath();
-      this.start += this.partLength;
-    }
-
-    const start = (Math.PI / 180) * 270;
-
-    if (this.bigPercent) {
-      let xStart = this.xc + Math.cos(start) * this.r;
-      let xEnd =
-        this.xc + Math.cos(start + (6.28 * this.bigPercent) / 100) * this.r;
-      let yStart = this.yc + Math.sin(start) * this.r;
-      let yEnd =
-        this.yc + Math.sin(start + (6.28 * this.bigPercent) / 100) * this.r;
-      let gradient = this.ctx.createLinearGradient(xStart, yStart, xEnd, yEnd);
-      gradient.addColorStop(0, "#58b38e");
-      gradient.addColorStop(0.01, "#eece4d");
-      this.ctx.beginPath();
-      this.ctx.strokeStyle = gradient;
-      this.ctx.arc(
-        this.xc,
-        this.yc,
-        this.r,
-        start,
-        start + (6.28 * this.bigPercent) / 100
-      );
-      this.ctx.lineWidth = this.lineWidth + 0.9;
-      this.ctx.strokeStyle = gradient;
-      this.ctx.stroke();
-      this.ctx.closePath();
-      this.currentNumbEl.style.color = "#eece4d";
-    }
-  }
+  const targetText = card1
+    .querySelector(".value.target-numb .numb")
+    .textContent.replace(",", "");
+  return {
+    canvas,
+    ctx,
+    percentText,
+    curentText,
+    targetText,
+    curentEl,
+  };
 }
 
-const a = new ProgressBar(colors, "monthly-target");
-a.drawBackGround();
-a.drawGradient();
+function drawProgress(className) {
+  const {
+    canvas,
+    ctx,
+    percentText,
+    curentText,
+    targetText,
+    curentEl,
+  } = getDataFromCard(className);
 
-const b = new ProgressBar(colors, "yearly-target");
-b.drawBackGround();
-b.drawGradient();
+  const colors = ["#eb7272", "#b766b9", "#7384e5", "#52b1bf", "#58b38e"];
+  let percent = (Number(curentText) / Number(targetText)) * 100;
+  const x = canvas.width / 2;
+  const y = canvas.height / 2;
+  const r = 100;
+  let start = -Math.PI / 2;
+  let step = (2 * Math.PI * percent) / 100 / 360;
+  let end = (2 * Math.PI * percent) / 100 - Math.PI / 2;
+  let endStart = start + step;
+  let size = 0;
+
+  let xStart = x + Math.cos(start) * r;
+  let xEnd = x + Math.cos(start + Math.PI / 2) * r;
+  let yStart = y + Math.sin(start) * r;
+  let yEnd = y + Math.sin(start + Math.PI / 2) * r;
+  let gradient = ctx.createLinearGradient(xStart, yStart, xEnd, yEnd);
+  ctx.lineWidth = 15;
+
+  gradient.addColorStop(0, "#eb7272");
+  gradient.addColorStop(1, "#b766b9");
+
+  function makeGradient(col, log, endGradient = Math.PI / 2) {
+    start = endStart;
+    xStart = x + Math.cos(start) * r;
+    xEnd = x + Math.cos(start + endGradient) * r;
+    yStart = y + Math.sin(start) * r;
+    yEnd = y + Math.sin(start + endGradient) * r;
+    gradient = ctx.createLinearGradient(xStart, yStart, xEnd, yEnd);
+    gradient.addColorStop(0, col[0]);
+    gradient.addColorStop(1, col[1]);
+  }
+
+  requestAnimationFrame(function inner() {
+    const i = requestAnimationFrame(inner);
+    if (endStart >= end) {
+      cancelAnimationFrame(i);
+      percentText.textContent = percent.toFixed();
+      return;
+    }
+    ctx.beginPath();
+    ctx.arc(x, y, r, start, endStart + step);
+    ctx.strokeStyle = gradient;
+    ctx.stroke();
+    ctx.closePath();
+    size += 1;
+    let per = ((endStart + Math.PI / 2) * 100) / (Math.PI * 2);
+    percentText.textContent = per.toFixed();
+    const indexColor = Math.round(((colors.length - 1) * per) / 100);
+    const color = colors[indexColor];
+    curentEl.style.color = per <= 100 ? color : "#F8CE1F";
+
+    if (per >= 25 && per <= 27) {
+      makeGradient(["#b766b9", "#7384e5"], "1");
+    }
+    if (per >= 50 && per <= 52) {
+      makeGradient(["#7384e5", "#52b1bf"], "2");
+    }
+
+    if (per >= 75 && per <= 77) {
+      makeGradient(["#52b1bf", "#58b38e"], "3");
+    }
+    if (per >= 100 && per <= 102) {
+      makeGradient(["#58b38e", "#F8CE1F"], "4", (Math.PI * 5) / 50);
+      ctx.lineWidth = 16;
+    }
+    if (per >= 107 && per <= 109) {
+      makeGradient(["#F8CE1F", "#F8CE1F"], "5");
+      ctx.lineWidth = 16;
+    }
+    endStart += step;
+  });
+}
+
+drawProgress("monthly-target");
+drawProgress("yearly-target");
