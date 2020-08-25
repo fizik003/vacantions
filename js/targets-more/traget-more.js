@@ -38,7 +38,7 @@ function drawProgress(className) {
   const y = canvas.height / 2;
   const r = 100;
   let lineWidth = 15;
-  let start = -Math.PI / 2 + 0.1;
+  let start = -Math.PI / 2;
   let step = (2 * Math.PI * percent) / 100 / 360;
   let end = (2 * Math.PI * percent) / 100 - Math.PI / 2;
   let endStart = start + step;
@@ -50,6 +50,7 @@ function drawProgress(className) {
   let yEnd = y + Math.sin(start + Math.PI / 2) * r;
   let gradient = ctx.createLinearGradient(xStart, yStart, xEnd, yEnd);
   ctx.lineWidth = lineWidth;
+  // ctx.lineCap = "round";
 
   gradient.addColorStop(0, "#eb7272");
   gradient.addColorStop(1, "#b766b9");
@@ -85,17 +86,17 @@ function drawProgress(className) {
     }
     let per = ((endStart + Math.PI / 2) * 100) / (Math.PI * 2);
     ctx.beginPath();
-    ctx.arc(x, y, r, per < 2 ? start - 0.1 : start, endStart + step);
+    ctx.arc(x, y, r, start, endStart + step);
     ctx.strokeStyle = gradient;
     ctx.stroke();
     ctx.closePath();
 
-    if (per > 2 && per < 25) {
+    if (per <= 26) {
       ctx.beginPath();
-      ctx.arc(x, y, r, start - 0.1, start);
-      ctx.strokeStyle = "#eb7272";
+      ctx.arc(x, y, r, -1.67, -1.57);
+      ctx.strokeStyle = "#e1e2e5";
       ctx.lineCap = "butt";
-      ctx.lineWidth = 15;
+      ctx.lineWidth = 14;
       ctx.stroke();
       ctx.closePath();
       ctx.lineCap = "round";
