@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
   <link rel="stylesheet" href="./dist/styles/index.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js
+
+
+
+  "></script>
+  
   
   <title>vacations</title>
 </head>
@@ -49,6 +55,92 @@
       </div>
     </div>
   </header>
+  <div class="modal-back"  id="modal1"> 
+    <div class="modal-commission modal ">
+      <div class="modal-commission__btn-exit">
+        <div class="btn-exit">
+          <span></span>
+        </div>
+      </div>
+      <div class="modal-commission__wrapper">
+        <div class="modal-commission__header">
+          <div class="modal-commission__title">
+            <i></i> 
+            <h2>Your Estimated Commissions</h2>
+          </div>
+          <select class="modal-commission__select-yaer" name="" id="">
+            <option value="">2019</option>
+            <option value="">2020</option>
+            <option value="">fdfd</option>
+          </select>
+        </div>
+        <div class="modal-commission__main">
+          <div class="modal-commission__item">
+            <p class="modal-commission__item-title">January</p>
+            <p class="modal-commission__item-value">240</p>
+          </div>
+          <div class="modal-commission__item">
+            <p class="modal-commission__item-title">February</p>
+            <p class="modal-commission__item-value">240</p>
+          </div>
+          <div class="modal-commission__item">
+            <p class="modal-commission__item-title">March</p>
+            <p class="modal-commission__item-value">240</p>
+          </div>
+        </div>
+        <div class="modal-commission__footer">
+          <div class="modal-commission__item">
+            <p class="modal-commission__item-title violet modal-commission__item-title_big-size">Total</p>
+            <p class="modal-commission__item-value violet  modal-commission__item-value_big-size violet  ">1000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="modal-back" id="modal2">
+    <div class="modal-offers">
+      <div class="modal-offers__btn-exit">
+        <div class="btn-exit">
+          <span></span>
+        </div>
+      </div>
+      <div class="modal-offers__wrapper">
+        <div class="modal-offers__header">
+          <div class="modal-offers__header-title">
+            <i></i>
+            <p>CURRENT OFFERS</p>
+          </div>
+        </div>
+        <div class="modal-offers__main">
+          <div class=" modal-ofers__item targets-more__card-main-item offers-item">
+            <a href="#" class="text-bold link">7-Night Grand Irish Whiskey Experience</a>
+            <span class="text"> - FROM $1,298pp</span>
+          </div>
+          <div class="modal-ofers__item targets-more__card-main-item offers-item">
+            <span class="text-bold">Stay 3 for 2 at Sheen Falls Lodge</span>
+            <span class="text"> - Oct - Dec 15 - Min 3 Nights</span>
+          </div>
+          <div class="modal-ofers__item targets-more__card-main-item offers-item">
+            <span class="text-bold">Free Upgrade to Executive Room at Davenport</span>
+            <span class="text"> - Oct 22 - Dec</span>
+          </div>
+          <div class=" modal-ofers__item targets-more__card-main-item offers-item">
+            <a href="#" class="text-bold link">7-Night Grand Irish Whiskey Experience</a>
+            <span class="text"> - FROM $1,298pp</span>
+          </div>
+          <div class="modal-ofers__item targets-more__card-main-item offers-item">
+            <span class="text-bold">Stay 3 for 2 at Sheen Falls Lodge</span>
+            <span class="text"> - Oct - Dec 15 - Min 3 Nights</span>
+          </div>
+          <div class="modal-ofers__item targets-more__card-main-item offers-item">
+            <span class="text-bold">Free Upgrade to Executive Room at Davenport</span>
+            <span class="text"> - Oct 22 - Dec</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <main class="main">
     <section class="general-information">
       <div class="container">
@@ -164,7 +256,7 @@
                     <p class="">CURRENT</p>
                     <div class="value current-numb">
                       <span class="unit">$</span>
-                      <span class="numb">198,000</span>
+                      <span class="numb">270,000</span>
                     </div>
                   </div>
                   <div class="targets-more__card-middle-column">
@@ -325,7 +417,7 @@
                   </div>
                 </div>
                 <div class="targets-more__card-footer">
-                  <div class="targets-more__card-footer-link">
+                  <div class="targets-more__card-footer-link commission-btn">
                     <i class="targets-more__card-footer-ico"></i>
                     <span>View Bookings</span> 
                   </div>
@@ -355,7 +447,7 @@
                   </div>
                 </div>
                 <div class="targets-more__card-footer">
-                  <div class="targets-more__card-footer-link">
+                  <div class="targets-more__card-footer-link offers-btn">
                     <i class="targets-more__card-footer-ico"></i>
                     <span>View Bookings</span> 
                   </div>
@@ -805,8 +897,19 @@
 
               
             </div>
-            <div class="your-quotes-big-card__footer">
-              
+            <div class="your-quotes__big-card-footer">
+              <div class="your-quotes__pagination">
+                <div class="pagination">
+                  <a class="blocked" href="#">&lt;&lt; previous</a>
+                  <a class="active" href="#">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#">6</a>
+                  <a href="#">next &gt;&gt;</a>
+                </div>
+              </div>
             </div>
 
           </div>
@@ -817,12 +920,23 @@
       <div class="container">
         <div class="yoy-revenue__wrapper">
           <div class="yoy-revenue__content">
-
+            <div class="yoy-revenue__header">
+              <p>YOY Revenue</p>
+            </div>
+            <div class="yoy-revenue__main">
+              <canvas class="bar-char" id="bar-char" height=312></canvas>
+            </div>
+            
+            
           </div>
         </div>
       </div>
     </section>     
   </main>
   <script src="./js/targets-more/traget-more.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/js/Chart.roundedBarCharts.min.js"></script>
+  <script src="js/your-quotes/your-quotes.js"></script>
+  <script src="./js/modal-commission/modal-commission.js"></script>
+  <script src="./js/modal-offers/modal-offers.js"></script>
 </body>
 </html>

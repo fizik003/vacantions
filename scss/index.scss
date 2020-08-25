@@ -6,6 +6,10 @@
 @import "./atoms/select/select";
 @import "./organisms/yoy-revenue/yoy-revenues";
 @import "./molecules/amount-gold/amount-gold";
+@import "./molecules/pagination/pagination";
+@import "./molecules/modal-comission/modal-commission";
+@import "./atoms/btn-exit/btn-exit";
+@import "./molecules/modal-offers/modal-offers";
 
 body {
   background-color: #01273b;
@@ -42,4 +46,21 @@ body {
 
 .black {
   color: #28323a;
+}
+
+.modal-back {
+  position: fixed;
+  display: none;
+  background-color: rgba(1, 39, 59, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.open-modal {
+  display: flex;
 }

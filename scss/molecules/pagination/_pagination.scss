@@ -1,0 +1,24 @@
+.pagination {
+  & {
+    display: flex;
+  }
+  & a {
+    text-decoration: none;
+    color: #508ff4;
+    padding-right: 2px;
+    padding-left: 2px;
+    font-size: 12px;
+  }
+
+  & a:not(:last-child)::after {
+    content: "\00A0|";
+  }
+
+  & .blocked {
+    color: #cccccc;
+  }
+
+  & .active {
+    color: black;
+  }
+}

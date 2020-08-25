@@ -1,0 +1,55 @@
+.modal-offers {
+  & {
+    margin: auto;
+    position: relative;
+    max-width: 612px;
+    width: 100%;
+  }
+
+  &__btn-exit {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+  }
+
+  &__wrapper {
+    // display: flex;
+    padding: 48.21px 46px 47.81px 46px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #707070;
+  }
+
+  &__header {
+    margin-bottom: 29.98px;
+  }
+
+  &__header-title {
+    display: flex;
+    align-items: center;
+  }
+
+  &__header-title i {
+    background-image: url("/src/img/modal-offers/ofers-ico.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+  }
+
+  &__header-title p {
+    color: #29333b;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 576px) {
+    &__wrapper {
+      // display: flex;
+      padding: 48.21px 15px 47.81px;
+    }
+  }
+}

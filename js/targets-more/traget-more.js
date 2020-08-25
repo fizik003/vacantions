@@ -32,11 +32,13 @@ function drawProgress(className) {
   } = getDataFromCard(className);
 
   const colors = ["#eb7272", "#b766b9", "#7384e5", "#52b1bf", "#58b38e"];
+
   let percent = (Number(curentText) / Number(targetText)) * 100;
   const x = canvas.width / 2;
   const y = canvas.height / 2;
   const r = 100;
-  let start = -Math.PI / 2;
+  let lineWidth = 15;
+  let start = -Math.PI / 2 + 0.1;
   let step = (2 * Math.PI * percent) / 100 / 360;
   let end = (2 * Math.PI * percent) / 100 - Math.PI / 2;
   let endStart = start + step;
@@ -47,10 +49,21 @@ function drawProgress(className) {
   let yStart = y + Math.sin(start) * r;
   let yEnd = y + Math.sin(start + Math.PI / 2) * r;
   let gradient = ctx.createLinearGradient(xStart, yStart, xEnd, yEnd);
-  ctx.lineWidth = 15;
+  ctx.lineWidth = lineWidth;
 
   gradient.addColorStop(0, "#eb7272");
   gradient.addColorStop(1, "#b766b9");
+
+  function drawBackGround() {
+    ctx.beginPath();
+    ctx.strokeStyle = "#e1e2e5";
+    ctx.arc(x, y, r, start, start + 6.28);
+    ctx.lineWidth = lineWidth - 0.5;
+    ctx.stroke();
+    ctx.closePath();
+  }
+
+  drawBackGround();
 
   function makeGradient(col, log, endGradient = Math.PI / 2) {
     start = endStart;
@@ -70,13 +83,24 @@ function drawProgress(className) {
       percentText.textContent = percent.toFixed();
       return;
     }
+    let per = ((endStart + Math.PI / 2) * 100) / (Math.PI * 2);
     ctx.beginPath();
-    ctx.arc(x, y, r, start, endStart + step);
+    ctx.arc(x, y, r, per < 2 ? start - 0.1 : start, endStart + step);
     ctx.strokeStyle = gradient;
     ctx.stroke();
     ctx.closePath();
-    size += 1;
-    let per = ((endStart + Math.PI / 2) * 100) / (Math.PI * 2);
+
+    if (per > 2 && per < 25) {
+      ctx.beginPath();
+      ctx.arc(x, y, r, start - 0.1, start);
+      ctx.strokeStyle = "#eb7272";
+      ctx.lineCap = "butt";
+      ctx.lineWidth = 15;
+      ctx.stroke();
+      ctx.closePath();
+      ctx.lineCap = "round";
+    }
+
     percentText.textContent = per.toFixed();
     const indexColor = Math.round(((colors.length - 1) * per) / 100);
     const color = colors[indexColor];
@@ -91,14 +115,15 @@ function drawProgress(className) {
 
     if (per >= 75 && per <= 77) {
       makeGradient(["#52b1bf", "#58b38e"], "3");
+      ctx.lineWidth = lineWidth + 0.2;
     }
     if (per >= 100 && per <= 102) {
       makeGradient(["#58b38e", "#F8CE1F"], "4", (Math.PI * 5) / 50);
-      ctx.lineWidth = 16;
+      ctx.lineWidth = lineWidth + 0.3;
     }
     if (per >= 107 && per <= 109) {
       makeGradient(["#F8CE1F", "#F8CE1F"], "5");
-      ctx.lineWidth = 16;
+      ctx.lineWidth = lineWidth + 0.2;
     }
     endStart += step;
   });

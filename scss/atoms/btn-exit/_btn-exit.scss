@@ -1,0 +1,33 @@
+.btn-exit {
+  & {
+    height: 31px;
+    width: 31px;
+    background-color: #508ff4;
+    position: relative;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  & span::after,
+  & span::before {
+    display: block;
+    height: 4px;
+    width: 12px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  & span::after,
+  & span::before {
+    content: "";
+  }
+
+  & span::after {
+    transform: translateY(-2px) translateX(-5.5px) rotate(45deg);
+  }
+
+  & span::before {
+    transform: translateY(-2px) translateX(-5.5px) rotate(-45deg);
+  }
+}
