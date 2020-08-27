@@ -71,6 +71,11 @@
     overflow-y: auto;
   }
 
+  &__navigation::-webkit-scrollbar {
+    width: 0;
+    display: none;
+  }
+
   &__navigation-item {
     text-decoration: none;
     color: #707070;
