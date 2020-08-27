@@ -27,25 +27,24 @@
   }
 
   &__user {
-    margin-top: 40px;
+    margin-top: 34px;
     margin-left: auto;
     margin-right: auto;
     width: max-content;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 57px;
   }
 
   &__user-name {
     color: #ffffff;
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 10px;
+    font: normal normal bold 36px/34px Arial;
+    margin-bottom: 4px;
   }
 
   &__user p {
     color: #ffffff;
     color: #ffffff;
-    font-size: 22px;
+    font: normal normal bold 22px/34px Arial;
   }
 
   &__cards {
@@ -66,7 +65,7 @@
     background-color: #ffffff;
     box-shadow: 0px 5px 25px #52575d1a;
     border-radius: 10px;
-    padding: 40px 0;
+    padding: 40px 15px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -79,22 +78,28 @@
     width: 59px;
     height: 59px;
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   &__card-text {
     text-align: center;
-    font-weight: 600;
+    white-space: nowrap;
+    font: normal normal bold 60px/69px Arial;
+    letter-spacing: 1.88px;
+  }
+
+  &__card-text_small {
+    // font: normal normal bold 50px/58px Arial;
+    letter-spacing: 0px;
   }
 
   &__card-text span {
-    font-size: 60px;
     margin-bottom: 10px;
   }
 
   &__card-text p {
-    margin-top: 10px;
-    font-size: 14px;
+    font: normal normal bold 14px/22px Arial;
+    letter-spacing: 0px;
   }
 
   @media (max-width: 1200px) {

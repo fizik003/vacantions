@@ -24,7 +24,7 @@ var chart = new Chart(ctx, {
     datasets: [
       {
         // barThickness: 10,
-        barPercentage: 0.5,
+        barPercentage: 0.4,
         categoryPercentage: 0.4,
         label: "2018",
         backgroundColor: "#508FF4",
@@ -33,7 +33,7 @@ var chart = new Chart(ctx, {
       },
       {
         // barThickness: 10,
-        barPercentage: 0.6,
+        barPercentage: 0.4,
         categoryPercentage: 0.4,
         label: "2019",
         backgroundColor: "#FF6A6A",

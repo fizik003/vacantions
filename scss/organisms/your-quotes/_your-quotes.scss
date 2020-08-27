@@ -1,13 +1,13 @@
 .your-quotes {
   &__wrapper {
-    padding: 20px 50px 20px 50px;
+    padding: 0px 50px 20px 50px;
     max-width: 1190px;
     margin-right: auto;
     margin-left: auto;
   }
 
   &__big-card {
-    padding: 29px 30px 29px 30px;
+    padding: 27px 30px 29px 30px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0px 3px 6px #cccccc1a;
@@ -15,14 +15,16 @@
   }
 
   &__big-card-header {
-    padding-bottom: 18.36px;
+    padding-bottom: 8.36px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     border-bottom: solid 2px #e0e7ff;
   }
 
   &__big-card-title {
+    white-space: nowrap;
     text-transform: uppercase;
     font-weight: 600;
   }
@@ -31,11 +33,11 @@
     display: flex;
     align-items: center;
     margin-left: auto;
-    margin-right: 44.5px;
+    margin-right: 40.5px;
   }
 
   &__big-card-label-check {
-    font-size: 15px;
+    font: normal normal normal 15px/17px Arial;
     color: #3d3d3d;
     margin-right: 5px;
   }
@@ -48,11 +50,19 @@
     color: #508ff4;
   }
 
+  &__big-card-sort-item {
+    display: flex;
+    align-items: center;
+    max-width: 264px;
+    width: 100%;
+  }
+
   &__big-card-label-select {
     text-transform: uppercase;
     font-size: 12px;
     color: #28323a;
-    margin-right: 15.5px;
+    margin-right: 11.5px;
+    white-space: nowrap;
   }
 
   &__big-card-main {
@@ -60,14 +70,14 @@
     flex-wrap: wrap;
     padding-top: 18px;
     justify-content: space-between;
-    margin: 0 -15px;
+    margin: 0 -13px;
   }
 
   &__small-card {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
     flex: 1 1 25%;
     box-sizing: border-box;
-    padding: 0 15px;
+    padding: 0 13px;
   }
 
   &__small-card-wrapper {
@@ -82,12 +92,11 @@
   &__small-card-sticker {
     border-radius: 10px;
     background-color: #e5f3f9;
-    font-weight: 600;
-    font-size: 10px;
     color: #000000;
     width: max-content;
-    padding: 5px 8px 3px;
+    padding: 6px 8px 3px 5px;
     margin-bottom: 13px;
+    font: normal normal bold 10px/11px Arial;
   }
 
   &__small-card-sticker_peach {
@@ -102,17 +111,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-left: 3px;
   }
 
   &__small-card-title {
-    font-weight: 600;
-    font-size: 16px;
+    font: normal normal bold 16px/18px Arial;
     margin-bottom: 15px;
   }
 
   &__small-card-items-list {
     display: flex;
-    margin-bottom: 21px;
+    margin-bottom: 22px;
   }
 
   &__small-card-keys {
@@ -137,8 +146,8 @@
 
   &__small-card-price {
     color: #000000;
-    font-size: 14px;
-    font-weight: 600;
+    display: flex;
+    font: normal normal bold 14px/16px Arial;
   }
 
   &__small-card-footer {
@@ -159,6 +168,19 @@
     justify-content: flex-end;
   }
 
+  @media (max-width: 1200px) {
+    &__big-card-title {
+      flex-basis: 100%;
+      margin-bottom: 5px;
+    }
+
+    &__big-card-check-quotes {
+      margin: unset;
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+  }
+
   @media (max-width: 576px) {
     &__wrapper {
       padding: 20px 20px;
@@ -169,7 +191,7 @@
     }
 
     &__big-card-header {
-      flex-direction: column;
+      // flex-direction: column;
     }
   }
 }

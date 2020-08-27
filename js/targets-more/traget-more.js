@@ -36,8 +36,9 @@ function drawProgress(className) {
   let percent = (Number(curentText) / Number(targetText)) * 100;
   const x = canvas.width / 2;
   const y = canvas.height / 2;
-  const r = 100;
   let lineWidth = 15;
+  const r = x - lineWidth / 2;
+
   let start = -Math.PI / 2;
   let step = (2 * Math.PI * percent) / 100 / 360;
   let end = (2 * Math.PI * percent) / 100 - Math.PI / 2;
@@ -66,15 +67,15 @@ function drawProgress(className) {
 
   drawBackGround();
 
-  function makeGradient(col, log, endGradient = Math.PI / 2) {
+  function makeGradient(col, from = 0, to = 1, endGradient = Math.PI / 2) {
     start = endStart;
     xStart = x + Math.cos(start) * r;
     xEnd = x + Math.cos(start + endGradient) * r;
     yStart = y + Math.sin(start) * r;
     yEnd = y + Math.sin(start + endGradient) * r;
     gradient = ctx.createLinearGradient(xStart, yStart, xEnd, yEnd);
-    gradient.addColorStop(0, col[0]);
-    gradient.addColorStop(1, col[1]);
+    gradient.addColorStop(from, col[0]);
+    gradient.addColorStop(to, col[1]);
   }
 
   requestAnimationFrame(function inner() {
@@ -96,7 +97,7 @@ function drawProgress(className) {
       ctx.arc(x, y, r, -1.67, -1.57);
       ctx.strokeStyle = "#e1e2e5";
       ctx.lineCap = "butt";
-      ctx.lineWidth = 14;
+      ctx.lineWidth = lineWidth - 1;
       ctx.stroke();
       ctx.closePath();
       ctx.lineCap = "round";
@@ -108,24 +109,33 @@ function drawProgress(className) {
     curentEl.style.color = per <= 100 ? color : "#F8CE1F";
 
     if (per >= 25 && per <= 27) {
-      makeGradient(["#b766b9", "#7384e5"], "1");
+      makeGradient(["#b766b9", "#7384e5"]);
     }
     if (per >= 50 && per <= 52) {
-      makeGradient(["#7384e5", "#52b1bf"], "2");
+      makeGradient(["#7384e5", "#52b1bf"]);
     }
 
+    // if (per >= 75 && per <= 77) {
+    //   makeGradient(["#52b1bf", "#58b38e"]);
+    //   ctx.lineWidth = lineWidth + 0.2;
+    // }
+
     if (per >= 75 && per <= 77) {
-      makeGradient(["#52b1bf", "#58b38e"], "3");
+      makeGradient(["#52b1bf", "#F8CE1F"], 0.5, 1);
       ctx.lineWidth = lineWidth + 0.2;
     }
-    if (per >= 100 && per <= 102) {
-      makeGradient(["#58b38e", "#F8CE1F"], "4", (Math.PI * 5) / 50);
+    if (per >= 105) {
+      makeGradient(["#F8CE1F", "#F8CE1F"]);
       ctx.lineWidth = lineWidth + 0.3;
     }
-    if (per >= 107 && per <= 109) {
-      makeGradient(["#F8CE1F", "#F8CE1F"], "5");
-      ctx.lineWidth = lineWidth + 0.2;
-    }
+    // if (per >= 100 && per <= 102) {
+    //   makeGradient(["#58b38e", "#F8CE1F"], 0, 1, (Math.PI * 5) / 50);
+    //   ctx.lineWidth = lineWidth + 0.3;
+    // }
+    // if (per >= 107 && per <= 109) {
+    //   makeGradient(["#F8CE1F", "#F8CE1F"], "5");
+    //   ctx.lineWidth = lineWidth + 0.2;
+    // }
     endStart += step;
   });
 }

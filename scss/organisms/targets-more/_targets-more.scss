@@ -1,6 +1,6 @@
 .targets-more {
   &__wrapper {
-    padding: 20px 50px 20px 50px;
+    padding: 24px 50px 0 50px;
     max-width: 1190px;
     margin-left: auto;
     margin-right: auto;
@@ -9,8 +9,8 @@
   &__title {
     text-align: center;
     color: #28323ab3;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font: normal normal normal 24px/29px Arial;
+    margin-bottom: 48px;
   }
 
   &__cards {
@@ -30,11 +30,15 @@
   }
 
   &__card-wrapper {
-    padding: 25px 29px 22px 30px;
+    padding: 26px 29px 22px 30px;
     background-color: #ffffff;
     box-shadow: 0px 5px 25px #c4c8d066;
     border-radius: 10px;
-    margin-bottom: 21px;
+    margin-bottom: 26px;
+  }
+
+  &__card-wrapper_pad-big {
+    padding-top: 32px;
   }
 
   &__card-title {
@@ -55,12 +59,14 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    padding-left: 18px;
   }
 
   &__card-left-column p {
     color: #5a5a5a;
     text-shadow: -6.06px 4px 101px #0000000d;
-    font-size: 14px;
+    font: normal normal normal 14px/18px Arial;
+    letter-spacing: 1.4px;
     margin-bottom: 8px;
   }
 
@@ -70,6 +76,10 @@
     font-size: 30px;
     text-shadow: -6.06px 4px 101px #0000000d;
     display: flex;
+  }
+
+  &__card-middle-column {
+    margin: 0 10px;
   }
 
   &__card-middle-column-value {
@@ -88,35 +98,40 @@
   &__card-right-column {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 
-  &__card-right-column p {
+  &__card-right-colum-money {
+    margin-bottom: 36px;
+  }
+
+  &__card-right-colum-money .value {
+    display: flex;
+    font: normal normal bold 30px/20px Arial;
+    color: #000000;
+    text-shadow: -6.06px 4px 101px #0000000d;
+  }
+
+  &__card-right-colum-money p {
     color: #5a5a5a;
     text-shadow: -6.06px 4px 101px #0000000d;
     letter-spacing: 1.4px;
-    margin-top: 90px;
-    margin-bottom: 8px;
-  }
-
-  &__card-right-column .value {
-    font-size: 30px;
-    color: #000000;
-    text-shadow: -6.06px 4px 101px #0000000d;
-    font-weight: 600;
-    margin-bottom: 30px;
+    text-align: center;
+    // margin-top: 90px;
+    margin-bottom: 17px;
   }
 
   &__card-promise {
     background-color: #f3edff;
     padding: 11.5px 10px 9.5px 10px;
     cursor: pointer;
-    margin-top: auto;
+    // margin-top: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 
   &__card-promise-label {
@@ -143,7 +158,7 @@
   }
 
   &__card-ico {
-    margin-right: 10px;
+    margin-right: 6px;
     width: 22px;
     height: 22px;
     display: block;
@@ -154,19 +169,34 @@
   &__card-title {
     font-size: 16px;
     font-weight: 600;
-
+    display: flex;
+    align-items: flex-end;
+  }
+  &__card-sort-el {
     display: flex;
     align-items: center;
+    // flex-grow: 1;
+    margin-left: auto;
+    max-width: 264px;
   }
 
-  &__card-sort-el span {
+  &__card-sort-label {
     margin-right: 15.5px;
+    white-space: nowrap;
   }
 
   &__card-main {
-    padding: 31px 0 15.4px 0;
+    padding: 21px 0 15.4px 0;
     display: flex;
     justify-content: space-between;
+  }
+
+  &__card-main-item_mr-47 {
+    margin-right: 47px;
+  }
+
+  &__card-main-item_mr-28 {
+    margin-right: 28px;
   }
 
   &__card-main-item .title {
@@ -183,8 +213,15 @@
     display: flex;
   }
 
+  &__card-main-item .value.second {
+    font: normal normal bold 24px/28px Arial;
+    letter-spacing: 0.75px;
+    color: #28323a;
+    display: flex;
+  }
+
   &__card-footer {
-    padding-top: 20px;
+    padding-top: 10px;
   }
 
   &__card-footer-link {
@@ -206,7 +243,11 @@
   }
 
   &__card-promise.commissions {
-    padding: 20.5px 0 17.5px 0;
+    padding: 20.5px 10px 17.5px;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    text-align: center;
+    box-sizing: border-box;
   }
 
   &__card-promise.commissions span {
@@ -217,6 +258,7 @@
     display: block;
     padding-top: 17.5px;
     padding-bottom: 0;
+    margin-bottom: 7px;
   }
 
   &__card-main-item .text {
@@ -225,12 +267,12 @@
   }
 
   &__card-main-item.offers-item {
-    padding: 18px 17px 17px 23px;
+    padding: 17px 17px 17px 23px;
     background-color: #f6f8fa;
   }
 
   &__card-main-item .text-bold {
-    font-weight: 600;
+    font: normal normal bold 14px/19px Arial;
     color: #5a5a5a;
   }
 
@@ -257,6 +299,10 @@
       padding: 15px 20px;
     }
 
+    &__card-title {
+      margin-bottom: 5px;
+    }
+
     &__card-content {
       flex-direction: column;
     }
@@ -274,14 +320,34 @@
       flex-direction: column;
     }
 
+    &__card-main-item:not(:last-child) {
+      margin-bottom: 10px;
+      border-bottom: solid 1px #e0e7ff;
+      padding-bottom: 5px;
+    }
+
+    &__card-main-item.offers-item {
+      padding: 17px 17px 17px 23px;
+      background-color: #f6f8fa;
+    }
+
+    &__card-main-item .title {
+      margin-bottom: 5px;
+    }
+
     &__card-left-column .value {
       display: flex;
       justify-content: center;
+      margin-bottom: 10px;
     }
 
     &__card-middle-column {
       display: flex;
       justify-content: center;
+    }
+
+    &__card-right-column {
+      align-items: center;
     }
 
     &__card-right-column p {
@@ -293,7 +359,7 @@
     }
 
     &__card-sort-el select {
-      width: 100%;
+      // width: 100%;
     }
   }
 }
@@ -322,6 +388,14 @@
 
 .text-bold.link {
   color: #508ff4;
+}
+
+.text-big {
+  font: normal normal normal 15px/20px Arial;
+}
+
+.text-small {
+  font: normal normal normal 14px/19px Arial;
 }
 
 // ffffffffffffff
@@ -357,11 +431,11 @@ span#percent::after {
 
 .canvas-wrap {
   position: relative;
-  width: 218px;
-  height: 218px;
+  // width: 218px;
+  // height: 218px;
 }
 
 #canvas {
-  width: 218px;
-  height: 218px;
+  // width: 218px;
+  // height: 218px;
 }

@@ -6,11 +6,13 @@ const showOffersModal = () => {
   btnShowOffers.addEventListener("click", () => {
     modalOffers.classList.add("open-modal");
     document.body.style.overflow = "hidden";
+    document.body.style.paddingRight = "17px";
   });
 
   btnExit.addEventListener("click", () => {
     modalOffers.classList.remove("open-modal");
     document.body.style.overflow = "auto";
+    document.body.style.paddingRight = "0";
   });
 };
 
