@@ -1,6 +1,6 @@
 .header {
   &__wrapper {
-    padding: 53px 50px 30px;
+    padding: 49px 50px 26px;
     max-width: 1190px;
     margin-left: auto;
     margin-right: auto;
@@ -11,7 +11,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 21px;
+    margin-bottom: 18px;
   }
 
   &__logo {
@@ -102,7 +102,7 @@
     }
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 650px) {
     &__wrapper {
       padding: 20px 25px;
     }
